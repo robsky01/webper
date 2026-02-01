@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Buat bebeyy 💌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- AMPOLOP -->
+<div class="envelope-container" id="envelopeBox" onclick="openEnvelope()">
+    <div class="envelope">
+        <div class="flap"></div>
+        <div class="heart">💗</div>
+    </div>
+    <p class="hint">Buatt bebeyyy </p>
+</div>
+
+<!-- CARD -->
+<div class="wrapper hidden" id="cardBox">
+    <div class="card">
+        <h1>Haiiii Bebey</h1>
+
+        <p class="text">
+            Bebe… maafin keegoisan aku yaa, sayang 🥺  
+            Kalau pun aku sakit hati, tapi gak seharusnya aku ngomong  
+            sampai sejauh itu, sampai bikin kamu ngerasa dianggap  
+            cewek murahan sama aku…  
+            padahal aku cowok kamu sendiri 😔  
+
+            <br><br>
+            Aku minta maaf banyak-banyak sama kamu,  
+            dari hati aku yang paling dalam 💔  
+            Mungkin kalau gara-gara aku kamu jadi gak buka puasa,  
+            aku bener-bener ngerasa bersalah…  
+
+            <br><br>
+            Tolong pikirin diri kamu sendiri dulu yaa, plis 🥹  
+            Maafin aku yaa, sayang 💗
+        </p>
+
+        <div class="actions">
+            <button onclick="maafin()">Mwachh (klik)</button>
+        </div>
+
+        <p id="response"></p>
+
+        <div class="gallery" id="gallery">
+            <img src="https://i.imgur.com/8Km9tLL.png">
+            <img src="https://i.imgur.com/JR6pYtG.png">
+            <img src="https://i.imgur.com/1XKQXQp.png">
+        </div>
+    </div>
+</div>
+
+<script>
+function openEnvelope() {
+    document.getElementById("envelopeBox").classList.add("open");
+    setTimeout(() => {
+        document.getElementById("envelopeBox").style.display = "none";
+        document.getElementById("cardBox").classList.remove("hidden");
+    }, 900);
+}
+
+function maafin() {
+    document.getElementById("response").innerHTML =
+    "Lovee youuu cintaaa.. hehehe";
+}
+
+function openGift() {
+    const gallery = document.getElementById("gallery");
+    gallery.classList.toggle("show");
+
+    gallery.querySelectorAll("img").forEach((img, i) => {
+        img.style.animationDelay = `${i * 0.25}s`;
+    });
+}
+</script>
+
+</body>
+</html>
